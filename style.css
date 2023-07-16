@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&family=Baskervville&family=Lato:wght@100;300;400;700;900&display=swap');
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: var(--lato);
+}
+:root{
+    /* fonts */
+    --lato: 'Lato', sans-serif;
+    /* color */
+    --blue: #15A4FA;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: inherit;
+}
+ul,ol,li{
+    list-style: none;
+
+}
+h1,h2,h3,h4,h5,h6,p{
+    line-height: .8;
+}
+.container{
+    width: 1110px;
+    margin: auto;
+}
+.head_text{
+    text-align: center;
+}
+.head_text h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+.head_text p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 30px;
+}
+/* common css end */
+/* navigation start */
+nav{
+    width: 100%;
+    padding: 32px 0;
+}
+nav .nav-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .nav-row .logo img{
+    width: 155px;
+}
+nav .nav-row .menu{
+    display: flex;
+    gap: 38px;
+}
+nav .nav-row .menu a{
+    font-family: var(--lato);
+    font-size: 24px;
+    font-weight: 400;
+    padding: 10px;
+    position: relative;
+}
+nav .nav-row .menu a::before{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--blue);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+nav .nav-row .menu a:hover ::before{
+    width: 100%;
+}
+/* navigation end */
+/* banner start */
+#banner{
+    width: 100%;
+    height: 800px;
+    background: url(./images/banner-imag.png) no-repeat center;
+    background-size: cover;
+}
+#banner .banner-content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#banner .banner-text{
+    width: 600px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+#banner .banner-text::after{
+    content: '\f078';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -100px;
+    transform: translateX(-50%);
+}
+#banner .banner-text h1{
+    font-family: var(--lato);
+    font-size: 120px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+}
+#banner .banner-text .under-line{
+    width: 100%;
+    height: 2px;
+    background: var(--blue);
+    margin: 35px 0 40px;
+}
+#banner .banner-text h2{
+    font-family: var(--blue);
+    font-size: 20px;
+    font-weight: 400;
+}
+#banner .banner-text h2 span{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#banner .banner-text a.btn{
+    font-weight: 400;
+    font-size: 20px;
+    padding: 22px 40px;
+    border: 2px solid var(--blue);
+    margin-top: 65px;
+    background: transparent;
+    transition: all linear .3s;
+}
+#banner .banner-text a.btn:hover{
+    background: var(--blue);
+}
+/* banner end */
+/* desgin text start */
+#about{
+    width: 100%;
+    background: #F6F9F9;
+    padding: 82px 0 112px;
+
+}
+#about .head_text{
+    text-align: center;
+}
+#about .head_text h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+#about .head_text p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 30px;
+}
+/* desgin text end */
+/* service start */
+#services{
+    width: 100%;
+    padding: 65px 0 62px;
+}
+#services .service-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+#services .service-row .serv-box{
+    flex-basis: 323px;
+    text-align: center;
+}
+#services .service-row .serv-box .icon{
+    width: 100px;
+    height: 100px;
+    background:  linear-gradient( to right,#48baff 50%,#5fc3ff 50%);
+    margin: auto;
+
+}
+#services .service-row .serv-box i{
+    font-size: 40px;
+    color: #fff;
+    line-height: 100px;
+    
+}
+#services .service-row .serv-box h3{
+    margin: 30px 0 25px;
+    font-size: 22px;
+    font-weight: 400;
+}
+#services .service-row .serv-box p{
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+    line-height: 20px;
+}
+/* service end */
+/* porfolio start */
+#portfolio{
+    width: 100%;
+    padding: 80px 0 115px;
+    background: #F6F9F9;
+}
+#portfolio .port-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+#portfolio .port-content .port-box{
+    flex-basis: 350px;
+    height: 260px;
+    position: relative;
+}
+#portfolio .port-content .port-box .overlay{
+    width: 100%;
+    height: 100%;
+    background: var(--blue);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all linear .3s;
+}
+#portfolio .port-content .port-box:hover .overlay{
+    opacity: 1;
+}
+#portfolio .port-content .port-box .overlay a{
+    padding: 15px;
+    border: 1px solid #fff;
+    transition: all linear .3s;
+}
+#portfolio .port-content .port-box .overlay a:hover{
+    background: #fff;
+    color: var(--blue);
+}
+#portfolio .port-content .port-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* porfolio end */
+/* contact start */
+#contact{
+    width: 100%;
+    padding: 70px 0 95px;
+    background:linear-gradient(rgba(45,57,80,.8),rgba(45,57,80,.8)), url(./images/footer-bg.png);
+    color: #fff;
+}
+#contact .contact-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+
+}
+#contact .contact-form form{
+    flex-basis: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#contact .contact-form form input{
+    height: 50px;
+    border: 1px solid #999999;
+    background: transparent;
+
+}
+#contact .contact-form form input[type=submit]{
+    width: 142px;
+    height: 45px;
+    border: 1px solid var(--blue);
+    color: #fff;
+    align-self: center;
+}
+#contact .contact-form form textarea{
+    background: transparent;
+}
+#contact .contact-form form input::placeholder,#contact .contact-form form textarea::placeholder{
+    padding-left: 20px;
+}
+/* contact end */
+/* footer start */
+footer{
+    width: 100%;
+    padding: 25px;
+}
+footer .footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .footer-content h4{
+    font-size: 15px;
+    font-weight: 400;
+    color: #999999;
+}
+footer .footer-content .social{
+    display: flex;
+    gap: 5px;
+}
+footer .footer-content .social a{
+   width: 30px;
+   height: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: var(--blue);
+   color: #fff;
+}
+/* footer end */
